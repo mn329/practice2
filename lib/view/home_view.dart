@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice2/model/destination.dart';
 import 'package:practice2/widget/card_widget.dart';
 
 class HomeView extends StatelessWidget {
@@ -80,11 +81,9 @@ class HomeView extends StatelessWidget {
                         ),
                       ),
                     ),
-                    CardWidget(),
-                    CardWidget(),
-                    CardWidget(),
-                    CardWidget(),
-                    CardWidget(),
+                    ...sampleDestinations.map(
+                      (destination) => CardWidget(destination: destination),
+                    ),
                   ],
                 ),
               )

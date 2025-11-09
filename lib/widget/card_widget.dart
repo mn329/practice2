@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:practice2/model/destination.dart';
 
 class CardWidget extends StatelessWidget {
   const CardWidget({
     super.key,
+    required this.destination,
   });
+
+  final Destination destination;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +25,7 @@ class CardWidget extends StatelessWidget {
             ),
           ),
           Text(
-            'Mountains',
+            destination.title,
             style: TextStyle(fontSize: 24, color: Colors.black),
           ),
           Row(
@@ -31,7 +35,7 @@ class CardWidget extends StatelessWidget {
                 color: Colors.amber,
               ),
               Text(
-                'Mountains',
+                destination.location,
                 style: TextStyle(fontSize: 16, color: Colors.grey.shade600),
               ),
             ],
